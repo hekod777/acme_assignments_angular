@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
     "start:dev": "SYNC=true DATABASE_URL=postgres://localhost/nwind_sales_angular nodemon --ignore 'views' server"
   },
   "author": "",

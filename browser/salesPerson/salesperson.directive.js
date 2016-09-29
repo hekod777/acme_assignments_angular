@@ -1,9 +1,8 @@
-// nwindSalesApp.directive('salespeopleSum', function(){
-// 	return{
-// 		scope: {
-// 			salespeople: '='
-// 		},
-// 		templateUrl:'/salespeopleSum.html',
-// 		controller:'SalesPersonListCtrl',
-// 	}
-// })
+nwindSalesApp.directive('salespeopleSum', function(){
+	return{
+		scope: {
+			theSalespeople: '='
+		},
+		templateUrl:'./salesPerson/salespeopleSum.html',
+	}
+})

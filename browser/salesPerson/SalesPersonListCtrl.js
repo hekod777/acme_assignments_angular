@@ -46,12 +46,12 @@ nwindSalesApp.controller('SalesPersonListCtrl', function($rootScope, $scope, $lo
 
 })
 
-nwindSalesApp.directive('salespeopleSum', function(){
-	return{
-		scope: {
-			theSalespeople: '='
-		},
-		templateUrl:'./salesPerson/salespeopleSum.html',
-		//controller:'SalesPersonListCtrl',
-	}
-})
+// nwindSalesApp.directive('salespeopleSum', function(){
+// 	return{
+// 		scope: {
+// 			theSalespeople: '='
+// 		},
+// 		templateUrl:'./salesPerson/salespeopleSum.html',
+// 		//controller:'SalesPersonListCtrl',
+// 	}
+// })
