@@ -1,5 +1,5 @@
 const server = require('http').createServer(require('./app'));
-const db = require('./db')
+const db = require('./db');
 
 var port = process.env.PORT || 3000;
 

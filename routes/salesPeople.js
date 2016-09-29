@@ -6,11 +6,8 @@ const Assignment = models.models.Assignment;
 module.exports = router;
 
 router.get('/', function(req, res, next){
-	//console.log ('aa');
-	//console.log (Salespeople);
 	Salespeople.findAll()
 		.then(function(theSalesPeople){
-			//console.log (theSalesPeople)
 			res.send(theSalesPeople);
 		})
 		.catch(next);
@@ -19,7 +16,6 @@ router.get('/', function(req, res, next){
 router.get('/assignment', function(req,res,next){
 	Assignment.findAll()
 		.then(function(allAssignment){
-			//console.log(allAssignment.data);
 			res.send(allAssignment);
 		})
 		.catch(next);
@@ -27,7 +23,6 @@ router.get('/assignment', function(req,res,next){
 
 
 router.post('/', function(req, res, next){
-	console.log(req.body);
 	Salespeople.create({
 		name: req.body.theName
 	})
@@ -62,7 +57,6 @@ router.delete('/:salespersonid/:regionid',function(req,res,next){
 })
 
 router.delete('/:id', function(req, res, next){
-	console.log (req.params.id);
 	Promise.all([
 		Salespeople.destroy({
 			where: {

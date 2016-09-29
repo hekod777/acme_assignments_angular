@@ -15,7 +15,6 @@ nwindSalesApp.factory('RegionFactory', function($http, $state){
 			.then(function(result){
 				regions.push(result.data);
 			})
-
 	}
 
 	RegionFactory.delete = function(theRegion){
@@ -27,13 +26,10 @@ nwindSalesApp.factory('RegionFactory', function($http, $state){
 	}
 
 	RegionFactory.double = function(zipcode){
-		console.log (zipcode);
 		var isUnique = regions.filter(function(region){
 			return region.zipcode == zipcode;
 		}).length == 0;
-		console.log ('unique?'+isUnique);
 		return isUnique;
-
 	}
 
 	return RegionFactory;

@@ -4,6 +4,5 @@ nwindSalesApp.directive('regionSum', function(){
 			theRegions: '='
 		},
 		templateUrl:'./region/regionSum.html',
-		//template: 'aaa'
 	}
 })
