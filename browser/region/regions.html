@@ -1,0 +1,33 @@
+<div class = container>
+	<h3> Regions </h3>
+	<!-- <div ng-class = "salespeople.length >= 4 ? 'alert alert-success' : 'alert alert-danger'">
+		there are {{salespeople.length}} salespeople in the company now!
+	</div> -->
+	<salespeople-sum the-salespeople='salespeople'></salespeople-sum>
+<!-- 	<div ng-class = "regions.length >= 4 ? 'alert alert-success' : 'alert alert-danger'">
+		there are {{regions.length}} regions in the company now!
+	</div> -->
+	<region-sum the-regions='regions'></region-sum>
+
+
+	<div>
+		<form name='newRegion' class = 'form-group'>
+			<lable for='region-input'> <h5>New Region:</h5> </lable>
+			<input type='text' class = 'form-control' id = 'region-input' ng-model='zipcode' ng-pattern='/^(\d{5})$/' ng-change = 'double()'></br>
+			<div ng-if = 'newRegion.$invalid' class = 'alert alert-danger'>Input is invalid! Digit ONLY! 5 digits!!</div>
+			<div ng-if = '!double()' class='alert alert-danger'> This zipcode is NOT unique! </div>
+			<button class = 'btn btn-warning' ng-click='submit()' ng-disabled='newRegion.$invalid || !zipcode.length || !double()' > Submit!</button>
+			{{zipcode}}
+		</form>
+	</div>
+
+
+	<div class = 'row' ng-repeat = 'region in regions'>
+		<div class = 'col-md-3 col-xs-3'>
+			<h4>{{region.zipcode}} </h4>
+		</div> 
+		<div class = 'col-md-9 col-xs-9'>
+			<button ng-click='delete(region)' class = 'btn btn-success'> Delete this region</button>
+		</div>
+	</div>
+</div>

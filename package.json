@@ -1,0 +1,28 @@
+{
+  "name": "angulartest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "SYNC=true DATABASE_URL=postgres://localhost/nwind_sales_angular nodemon --ignore 'views' server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.2",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "chai": "^3.5.0",
+    "express": "^4.14.0",
+    "lodash": "^4.16.2",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "pg": "^6.1.0",
+    "sequelize": "^3.24.3",
+    "supertest-as-promised": "^4.0.0",
+    "swig": "^1.4.2"
+  }
+}

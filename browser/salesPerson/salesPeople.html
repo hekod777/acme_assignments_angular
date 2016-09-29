@@ -1,0 +1,38 @@
+<div class = container>
+	<h3> Sales People </h3>
+<!-- 	<div ng-class = "salespeople.length >= 4 ? 'alert alert-success' : 'alert alert-danger'">
+		there are {{salespeople.length}} salespeople in the company now!
+	</div> -->
+	<salespeople-sum the-salespeople='salespeople'></salespeople-sum>
+	<div ng-class = "regions.length >= 4 ? 'alert alert-success' : 'alert alert-danger'">
+		there are {{regions.length}} regions in the company now!
+	</div>
+
+	<div>
+		<form name='newSalesperson'>
+			New Salesperson:
+			<input type='text' ng-model='name' ng-pattern='/^[a-zA-Z\s]*$/'></br>
+			<div ng-if = 'newSalesperson.$invalid' class = 'alert alert-danger'>Input is invalid! Space and letters ONLY! It cannot be empty!!</div>
+			<button class = 'btn btn-warning' ng-click='submit()' ng-disabled='newSalesperson.$invalid || !name.length'> Submit!</button>
+			{{name}}
+		</form>
+	</div>
+
+	<div ng-repeat = 'salesperson in salespeople'>
+		<div class = 'row'>
+			<div class = 'col-md-3 col-xs-3'>
+				<h4>{{salesperson.name}} </h4>
+			</div> 
+			<div class = 'col-md-9 col-xs-9'>
+				<button ng-click='delete(salesperson)' class = 'btn btn-success'> Delete this dude</button>
+			</div>		
+		</div>
+		<div ng-repeat = 'region in regions'>
+			<div class = 'row' ng-click='assign(salesperson, region)' ng-class="assigned(salesperson, region) ? 'mark' : ''" >
+				<div class = 'col-md-12 col-xs-12'>
+					{{region.zipcode}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

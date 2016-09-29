@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.css" />
+		<script src="/angular/angular.js" defer></script>
+		<script src="/angular-ui-router/release/angular-ui-router.js" defer></script>
+		<script src="/app_k.js" defer></script>
+		<script src="/region/RegionService.js" defer></script>
+		<script src="/region/RegionListCtrl.js" defer></script>
+<!-- 		<script src="/region/region.directive.js"></script> -->
+		<script src="/salesPerson/SalesPersonListCtrl.js" defer></script>
+		<script src="/salesPerson/SalesPersonService.js" defer></script>
+<!-- 		<script src="/salesPerson/salesperson.directive.js"></script> -->
+		<script src="/salesPerson/homeCtrl.js" defer></script>
+		<title></title>
+	</head>
+	<body ng-app= 'nwindSalesApp'>
+		<div class ='container'>
+			<h1>Welcome to Acme Company!</h1>
+		</div>
+		<nav class = 'navbar navbar-default'>
+			<div class = 'container-fluid'>
+				<ul class = 'nav navbar-nav'>
+					<li><a ui-sref="home"> Home </a></li>
+					<li><a ui-sref='salesPeople'> Sales People </a></li>
+					<li><a ui-sref='regions'> Region </a></li>
+				</ul>
+			</div>
+		</nav>
+		<ui-view></ui-view>
+	</body>
+</html>
